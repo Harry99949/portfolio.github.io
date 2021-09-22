@@ -1,0 +1,263 @@
+@charset "utf-8";
+html {
+  font-size: 100%;
+}
+body {
+  margin: 0 auto;
+  max-width: 1360px;
+  color: #333;
+  font-size: 0.875rem;
+  min-height: 100vh;
+  position: relative;
+}
+a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+a:hover {
+  opacity: 0.7;
+}
+.wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+li a {
+  text-decoration: none;
+  color: red;
+}
+.logo a {
+  width: 180px;
+  line-height: 1px;
+  display: block;
+}
+.logo {
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+/* ----header---- */
+#header {
+  width: 100%;
+  height: 90px;
+  padding-top: 30px;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-sizing: border-box;
+}
+#nav a {
+  color: #fff;
+}
+#nav li {
+  margin-bottom: 14px;
+  font-size: 2rem;
+}
+#nav {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  right: 300px;
+  width: 300px;
+  color: #fff;
+  padding: 36px 50px;
+  transition: all 0.5s;
+  z-index: 20;
+  opacity: 0;
+}
+.open #nav {
+  left: 100px;
+  opacity: 1;
+}
+.toggle-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  transition: all 0.5s;
+  cursor: pointer;
+  z-index: 20;
+}
+.toggle-btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  transition: all 0.5s;
+}
+.toggle-btn span:nth-child(1) {
+  top: 10px;
+}
+.toggle-btn span:nth-child(2) {
+  bottom: 10px;
+}
+.open .toggle-btn span {
+  background-color: #fff;
+}
+.open .toggle-btn span:nth-child(1) {
+  -webkit-transform: translateY(4px) rotate(-45deg);
+  transform: translateY(4px) rotate(-45deg);
+}
+.open .toggle-btn span:nth-child(2) {
+  -webkit-transform: translateY(-4px) rotate(45deg);
+  transform: translateY(-4px) rotate(45deg);
+}
+#mask {
+  display: none;
+  transition: all 0.5s;
+}
+.open #mask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: .8;
+  z-index: 10;
+  cursor: pointer;
+}
+/* ---main---- */
+main {
+  padding: 70px 20px 160px 20px;
+  box-sizing: border-box;
+}
+main .wrapper {
+  flex-wrap: wrap;
+  padding: 20px 0 20px 0;
+}
+main .wrapper li {
+  width: 23%;
+  margin-bottom: 40px ;
+}
+main .wrapper li p {
+  color: black;
+  font-size: .75rem;
+}
+.more {
+  text-align: center;
+}
+/* ----footer--- */
+footer {
+  max-width: 1360px;
+  padding: 0 40px;
+  margin-top: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+}
+.menu {
+  display: flex;
+}
+.social-media .wrapper li a{
+  color: black;
+  padding: 0 10px ;
+}
+.social-media .wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+/* ----products---- */
+.more span , .more a {
+  padding: 0 20px 0 20px;
+}
+.page-number :hover {
+  opacity: .5;
+}
+.products-title {
+ padding-top: 50px; 
+}
+
+/* -----about------ */
+.about {
+  padding-top: 60px;
+}
+.about h1 {
+  font-size: .875rem;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.about-detail {
+  max-width: 600px;
+}
+.about-detail p {
+  line-height: 1.9;
+  margin-bottom: 30px;
+  font-size: .875rem;
+}
+/* ----company--- */
+.company {
+  max-width: 600px;
+}
+.company h1 {
+  font-size: .875rem;
+  margin: 50px 0 20px 0;
+}
+.info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.company dl {
+  margin-left: 10px;
+}
+.company dt {
+  width: 30%;
+  padding-top: 25px;
+  border-bottom: solid .7px #dcdbab;
+} 
+.company dd{
+  width: 70%;
+  margin-left: 0;
+  padding: 25px 0 25px 0;
+  border-bottom: solid .7px#dcdbab;
+}
+.company dt:last-of-type, .company dd:last-of-type {
+  border-bottom: none;
+}
+.map{
+  max-width: 600px;
+}
+@media (max-width: 900px) {
+  #header {
+    height: 80px;
+  }
+  main .wrapper li {
+    width: 47%;
+  }
+  main .wrapper {
+    padding: 80px 0 20px 0;
+  }
+  /* ----products---- */
+  footer .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  footer .menu {
+    padding-left: 0;
+  }
+  .social-media .menu {
+    margin-bottom: 0;
+  }
+  .social-media .wrapper li a{
+    padding: 0 30px 0 0;
+  }
+  .social-media .wrapper p {
+    margin-top: 0;
+  }
+}
