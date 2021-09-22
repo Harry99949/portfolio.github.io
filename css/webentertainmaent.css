@@ -1,0 +1,283 @@
+@charset "utf-8";
+body {
+  font-size: 100%;
+  margin: 0;
+}
+main {
+  background-color: #EEE;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  font-size: .875rem;
+}
+h1 {
+  letter-spacing: 8px;
+  font-size: 2.225rem;
+  margin-bottom: 0;
+}
+#news,#business, #company,footer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+section {
+  padding-bottom: 120px;
+}
+.wrapper {
+  padding: 0 12px;
+}
+/* ----header------ */
+.logo {
+  margin: auto 0;
+}
+.logo img{
+  width: 100px;
+}
+.nav {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1032px;
+  width: 100%;
+}
+/* -----menu----- */
+.menu {
+  margin: auto 0;
+}
+.menu > ul {
+  display: flex;
+}
+.menu li a{
+  color: black;
+  padding: 0 15px;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.btn {
+  margin: auto 0;
+  width: 200px;
+  height: 80px;
+  display: inline-block;
+  font-size: .75rem;
+  text-align: center;
+  line-height: 80px;
+  background-color: black;
+}
+.btn a {
+  color: white;
+}
+/* -----mainbg----- */
+.main-bg img{
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 80px);
+  max-width: 100%;
+  object-fit: cover;
+  margin-bottom: 120px;
+}
+/* -----news------ */
+.text > p {
+  padding: 0 0 30px 0;
+  display: inline-block;
+  position: relative;
+}
+.text > p:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; 
+  display: inline-block;
+  width: 50px; 
+  height: 2px; 
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); 
+  background-color:black;
+}
+.list {
+  display: flex;
+  padding: 0;
+  margin-top: 80px;
+  align-items: center;
+}
+#news li {
+  width: calc(100%/3);
+  padding: 10px 10px 10px 20px;
+  border-left: solid 1px black;
+}
+ul  :first-child {
+  border-left: initial;
+  padding-left: 0;
+}
+.time span {
+  background: black;
+  color: white;
+  padding: 2px 8px;
+  font-size: .75rem;
+  text-align: center;
+}
+/* -----about----- */
+#about {
+  display: flex;
+  justify-content: space-between;
+}
+.about-img {
+  max-width: 55%;
+}
+.about-img img{
+  max-width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+#about .text {
+  padding: 150px 5% 0 5%;
+  width: 45%;
+}
+.contents {
+  margin-top: 50px;
+}
+/* ----business----- */
+.business-img  {
+  display: flex;
+  max-width: 100%;
+  justify-content: space-between;
+  padding: 0 10%;
+}
+.business-img img {
+  max-width: 100%;
+}
+.business-img-left {
+  max-width: 46%;
+  margin: 100px 0 0 0;
+  padding:0 ; 
+}
+.business-img-right {
+  max-width: 46%;
+  margin: 0;
+  padding: 0;
+}
+.business-img li {
+  margin-bottom: 30px;
+}
+/* ----company----- */
+#company {
+  display: flex;
+  height: 750px;
+
+}
+.company-contents {
+  background-color: white;
+  padding: 80px 15% 80px 5%;
+  position: absolute;
+}
+#company table {
+  margin-top: 50px;
+}
+.company-img {
+  max-width: 53%;
+  position: relative;
+  top: 95px;
+  left: 450px;
+}
+#company img{
+  max-width: 100%;
+  height: 400px;
+}
+#company tr {
+  line-height: 25px;
+}
+#company td {
+  padding-right: 40px;
+}
+#company tr:nth-child(6) td:nth-child(1) {
+  vertical-align: top;
+}
+/* -----footer----- */
+footer {
+  padding: 50px 0;
+}
+.footer-left img {
+  width: 25%;
+}
+@media (max-width: 900px) {
+  section {
+    padding-bottom: 50px;
+  }
+  .text {
+    padding-left: 20px;
+  }
+  .wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  /* ---header--- */
+  .logo img {
+    margin: 20px 0 0 15px;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .menu ul {
+    padding: 0;
+  }
+  .btn {
+    display: none;
+  }
+  /* ----mainbg---- */
+  .main-bg img {
+    margin-bottom: 30px;
+  }
+  /* ---news--- */
+  .list {
+    flex-direction: column;
+    align-items: initial;
+  }
+  #news li {
+    border-left: initial;
+  }
+  /* -----about----- */
+  #about {
+    flex-direction: column;
+  }
+  .about-img {
+    max-width: 100%;
+  }
+  #about .text {
+    padding: 50px 20px 0 20px;
+  }
+  /* -----business---- */
+  .business-img {
+    flex-direction: column;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  .business-img-left,.business-img-right {
+    max-width: 100%;
+  }
+  /* -----company----- */
+  #company {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+  }
+  .company-contents {
+    margin: 0 20px 20px 20px;
+    padding: 0 0 0 10px;
+    position: initial;
+  }
+  .company-img {
+    position: initial;
+    padding: 0 20px;
+    max-width: 100%;
+    height: 400px;
+  }
+  /* ---footer--- */
+  footer p small{
+    padding:0 20px;
+  }
+}
