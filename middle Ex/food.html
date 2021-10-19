@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>石井花壇 | 温海温泉旅館【公式サイト】</title>
+        <meta name="description" content="日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。
+        伝統的「和」の息づく空間で、至極のひとときをお過ごしください。">
+        <link rel="stylesheet" href="css/ishii-article.css">
+        <link rel="icon" href="img/logo02.png">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ja.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" ></script>
+    </head>
+    <body>
+        <header id="header">
+            <div class="wrapper">
+                <div class="logo-nav">
+                    <a href="ishii.html">
+                        <img src="img/top-header-logo.png" alt="logo">
+                    </a>
+                    <ul class="nav">
+                        <li><a href="room.html">お部屋</a></li>
+                        <li><a href="food.html">お料理</a></li>
+                        <li><a href="hotspring.htm">温泉</a></li>
+                    </ul>
+                </div>
+                <div class="modal">
+                    <div id="overlay" class="overlay"></div>
+                    <div class="reserve-wrap">
+                        <form action="" method='post'>
+                            <div class="modal-window">
+                                <p>宿泊予約</p>
+                                <div class="close">
+                                    <img src="img/close.png" alt="close">
+                                </div>
+                                <div class="name">
+                                    <p><label>お名前<br>
+                                            <input type="text" placeholder="例:石井正悟" required></label>
+                                    </p>    
+                                </div>
+                                    <div class="email">
+                                        <p><label>メールアドレス<br>
+                                                <input type="text" placeholder="例:Example@example.com" required></label>
+                                        </p>    
+                                    </div>
+                                <div class="plan">
+                                    <p>
+                                        <label>ご希望プラン（空いているプランのみ表示されます）<br>
+                                            <select required>
+                                                <option value="" hidden>プランを選択してください</option>
+                                                <option value="懐石">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+                                                <option value="特別">平日に優雅に楽しむ、特別宿泊プラン</option>
+                                                <option value="ファミリー">絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+                                            </select>
+                                        </label>
+                                    </p>    
+                                </div>
+                                <div id="datepicker">
+                                    <p><label >日時選択<br>
+                                        <input type="text" id="flatpickr" class="datepicker" placeholder="日時を選択してください"required></label>
+                                    </p>
+                                </div>
+                                <div class="button">
+                                    <input type="submit" value="送信する"></input>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="calendar">
+                            <button class=" js-open button-open">宿泊予約</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div id="mask"></div>
+            </div>
+        </header>
+            <main>
+            <section id="fv-article">
+                <div class="main-imgbox-food">
+                    <div class="fv-title">
+                        <p>お料理</p>
+                    </div>
+                </div>
+            </section>
+            <section id="article">
+                <p>トップ > お料理</p>
+                <div class="article-title" data-aos="fade-up">
+                    <p>地元熱海の市場で仕入れた食材のみを使った食材をふんだんに使い、<br>
+                        大将の技が光る「熱海料理」<br>
+                        四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。</p>
+                </div>
+                <div class="article-detail">
+                    <div class="article-img">
+                        <img src="img/menu01.png" alt="">
+                    </div>
+                    <div class="article-introduction" data-aos="fade-up">
+                        <div class="article-introduction-contents">
+                            <h1>地元食材にこだわった会席料理</h1>
+                            <p>みずみずしくほのかに甘い野菜、新鮮で味に深みがある魚介類、肉類。<br>
+                            旬の素材をそのままに生かす、経験に裏打ちされた確かな技。<br>
+                            四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-detail-reverse">
+                    <div class="article-img-reverse">
+                        <img src="img/menu02.png" alt="">
+                    </div>
+                    <div class="article-introduction-reverse" data-aos="fade-up">
+                        <div class="article-introduction-contents-reverse">
+                            <h1>熱海の漁港で目利きの品を</h1>
+                            <p>石井花壇でお出しする料理はすべて料理長である大将の目利きで、<br>
+                                熱海の魚市場でその日のうちに仕入れたものを使用しております。<br>
+                                日本海の宝玉を十分にお楽しみください。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-detail">
+                    <div class="article-img">
+                        <img src="img/menu03.jpg" alt="">
+                    </div>
+                    <div class="article-introduction" data-aos="fade-up">
+                        <div class="article-introduction-contents">
+                            <h1>食材が一流、職人も一流</h1>
+                            <p>石井花壇の料理人は料亭で20年経験を積んだものばかり。<br>
+                                その時の最も旬な食材を、最高の調理でお届けします。<br>
+                                また、お料理への細かいご要望にもお答えできますので、<br>
+                                お気軽にお申し付けください。</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="bottom">
+                <div class="text-size">
+                    <div class="wrapper" data-aos="fade-up">
+                        <a href="hotspring.htm">温泉</a>
+                        <a href="food.html">お料理</a>
+                        <a href="room.html">お部屋</a>
+                    </div>
+                    <div class="footer-logo">
+                        <img src="img/footer-logo.png" alt="">
+                    </div>
+                    <div class="footer-address">
+                        <div class="wrapper">
+                            <p>〒000-0000</p>
+                            <p>山形県鶴岡市xxxxxxxxxxx</p>
+                        </div>
+                        <div class="wrapper">
+                            <p>TEL.000-0000-0000</p>
+                            <p>FAX.00-0000-0000</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p><small>Copyright &copy; 石井花壇 All Rights Reserved.</small></p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/ishii.js"></script>
+    </body>
+</html>
