@@ -131,64 +131,98 @@
     <section id="successful">
       <h1>TOEFL成功事例</h1>
       <ul class="successful-ex">
-
-
         <li>
-          <?php if (have_rows('left-result')) :
-            while (have_rows('left-result')) : the_row(); ?>
-              <h1>
-                <?php the_sub_field('left-title'); ?>
-
-              </h1>
-              <div class="successful-img">
-                <img src="<?php the_sub_field('left-img'); ?>" alt="" />
-              </div>
-              <div class="successful-wrapper">
-                <p class="occupation">
-                  <?php the_sub_field('left-occupation'); ?>
-                </p>
-                <p class="name"><?php the_sub_field('left-name'); ?></p>
-              </div>
-              <p class="goal"><?php the_sub_field('left-goal'); ?></p>
-              <?php endwhile; ?>
+          <?php if (get_field('left-title', 404)) :  ?>
+            <h1><?php the_field('left-title', 404); ?></h1>
+          <?php endif; ?>
+          <div class="successful-img">
+            <?php
+            $imagefiled = get_field('left-img', 404);
+            if (!empty($imagefiled)) {
+            ?>
+              <img src="<?php echo $imagefiled['url']; ?>" alt="<?php echo $imagefiled['alt']; ?>" />
+            <?php } ?>
+          </div>
+          <div class="successful-wrapper">
+            <p class="occupation">
+              <?php if (get_field('left-occupation', 404)) :  ?>
+                <?php the_field('left-occupation', 404); ?>
+              <?php endif; ?>
+            </p>
+            <p class="name">
+              <?php if (get_field('left-name', 404)) :  ?>
+                <?php the_field('left-name', 404); ?>
+              <?php endif; ?>
+            </p>
+          </div>
+          <p class="goal">
+            <?php if (get_field('left-result', 404)) :  ?>
+              <?php the_field('left-result', 404); ?>
             <?php endif; ?>
+          </p>
         </li>
 
-        <?php if (get_field('middle-result')) : ?>
-          <?php while (the_repeater_field('middle-result')) : ?>
-            <li>
-              <h1><?php the_sub_field('middle-title'); ?></h1>
-              <div class="successful-img">
-                <img src="<?php the_sub_field('middle-img'); ?>" alt="" />
-              </div>
-              <div class="successful-wrapper">
-                <p class="occupation">
-                  <?php the_sub_field('middle-occupation'); ?>
-                </p>
-                <p class="name"><?php the_sub_field('middle-name'); ?></p>
-              </div>
-              <p class="goal"><?php the_sub_field('middle-goal'); ?></p>
-            </li>
-          <?php endwhile; ?>
-        <?php endif; ?>
+        <li>
+          <?php if (get_field('middle-title', 404)) :  ?>
+            <h1><?php the_field('middle-title', 404); ?></h1>
+          <?php endif; ?>
+          <div class="successful-img">
+            <?php
+            $imagefiled = get_field('middle-img', 404);
+            if (!empty($imagefiled)) {
+            ?>
+              <img src="<?php echo $imagefiled['url']; ?>" alt="<?php echo $imagefiled['alt']; ?>" />
+            <?php } ?>
+          </div>
+          <div class="successful-wrapper">
+            <p class="occupation">
+              <?php if (get_field('middle-occupation', 404)) :  ?>
+                <?php the_field('middle-occupation', 404); ?>
+              <?php endif; ?>
+            </p>
+            <p class="name">
+              <?php if (get_field('middle-name', 404)) :  ?>
+                <?php the_field('middle-name', 404); ?>
+              <?php endif; ?>
+            </p>
+          </div>
+          <p class="goal">
+            <?php if (get_field('middle-result', 404)) :  ?>
+              <?php the_field('middle-result', 404); ?>
+            <?php endif; ?>
+          </p>
+        </li>
 
-        <?php if (get_field('right-result')) : ?>
-          <?php while (the_repeater_field('right-result')) : ?>
-            <li>
-              <h1><?php the_sub_field('right-title'); ?></h1>
-              <div class="successful-img">
-                <img src="<?php the_sub_field('right-img'); ?>" alt="" />
-              </div>
-              <div class="successful-wrapper">
-                <p class="occupation">
-                  <?php the_sub_field('right-occupation'); ?>
-                </p>
-                <p class="name"><?php the_sub_field('right-name'); ?></p>
-              </div>
-              <p class="goal"><?php the_sub_field('right-goal'); ?></p>
-            </li>
-          <?php endwhile; ?>
-        <?php endif; ?>
+        <li>
+          <?php if (get_field('right-title', 404)) :  ?>
+            <h1><?php the_field('right-title', 404); ?></h1>
+          <?php endif; ?>
+          <div class="successful-img">
+            <?php
+            $imagefiled = get_field('right-img', 404);
+            if (!empty($imagefiled)) {
+            ?>
+              <img src="<?php echo $imagefiled['url']; ?>" alt="<?php echo $imagefiled['alt']; ?>" />
+            <?php } ?>
+          </div>
+          <div class="successful-wrapper">
+            <p class="occupation">
+              <?php if (get_field('right-occupation', 404)) :  ?>
+                <?php the_field('right-occupation', 404); ?>
+              <?php endif; ?>
+            </p>
+            <p class="name">
+              <?php if (get_field('right-name', 404)) :  ?>
+                <?php the_field('right-name', 404); ?>
+              <?php endif; ?>
+            </p>
+          </div>
+          <p class="goal">
+            <?php if (get_field('right-result', 404)) :  ?>
+              <?php the_field('right-result', 404); ?>
+            <?php endif; ?>
+          </p>
+        </li>
 
 
       </ul>
